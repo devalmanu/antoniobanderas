@@ -1,0 +1,248 @@
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+*:hover,
+*:focus {
+  outline: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+	min-width: 320px;
+	position: relative;
+	font-family: $GraphikLCG;
+	font-size: 16px;
+	line-height: 1.4;
+	overflow-x: hidden;
+	min-height: 100vh;
+	color: $color-white;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	overflow-anchor: none;
+	background: $color-dark;
+}
+.scrollElement {
+	position: absolute;
+	height: 12000px;
+	width: 100px;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+::placeholder {
+	color: $color-white;
+}
+
+.container {
+	width: 100%;
+	max-width: 1410px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.main {
+	overflow-x: hidden;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+img {
+	@include block;
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+ul,
+li,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+	color: $color-white;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	&[href^="javascript:void(0)"] {
+		cursor: default;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $GraphikLCG;
+  	font-weight: 700;
+  	line-height: 1;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;	
+}
+h1 {
+	font-size: 58px;
+	color: $color-white;
+	@include breakpoint(mobilebig) {
+		font-size: 38px;
+	}
+}
+h2 {
+	font-size: 42px;
+	@include breakpoint(mobilebig) {
+		font-size: 30px;
+	}
+}
+h3 {
+	font-size: 24px;
+  	@include breakpoint(tablet) {
+		font-size: 18px;
+	}
+}
+h4 {
+	font-size: 24px;
+  @include breakpoint(tablet) {
+		font-size: 18px;
+	}
+}
+
+p {
+	font-family: $GraphikLCG;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.1;
+	color: $color-white;
+	margin-bottom: 0;
+	&.text-bold, strong {
+		font-family: $GraphikLCG;
+		font-weight: 700;
+	}
+	&:last-child, &:only-child {
+		margin-bottom: 0;
+	}
+  	@include breakpoint(mobilebig) {
+		font-size: 14px;
+	}
+}
+
+.is-vishidden {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.btn-reset {
+	border: none;
+	padding: 0;
+	background: 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+	cursor: pointer; 
+}
+
+.btn-accent-link {
+	display: block;
+	font-family: $GraphikLCG;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	color: $color-white;
+	background: transparent;
+	margin: 20px auto 0;
+	border: 1px solid $color-white;
+	border-radius: 0;
+	padding: 20px 23px 19px;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	max-width: min-content;
+	white-space: nowrap;
+	transition: box-shadow .15s ease-in-out, color .25s ease, background .25s ease;
+	&:hover, &:focus {
+		color: $color-dark;
+		background: $color-white;
+		border: 1px solid $color-white;
+		box-shadow: 0 0 10px 0 #7185a7 inset, 0 0 20px 2px #7185a7;
+	}
+}
+
+.btn-down-blue {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 54px;
+	height: 48px;
+	background: $accent;
+	border-radius: 0;
+	@include breakpoint(mobilebig) {
+		width: 38px;
+		height: 34px;
+	}
+	svg {
+		stroke: $color-white;
+	}
+}
+
+.desc-block.mob-none {
+	display: block !important;
+	@include breakpoint(mobilebig) {
+		display: none !important;
+	}
+}
+.desc-flex.mob-none {
+	display: flex !important;
+	@include breakpoint(mobilebig) {
+		display: none !important;
+	}
+}
+.desc-flex.mob-none {
+	display: flex !important;
+	@include breakpoint(mobilebig) {
+		display: none !important;
+	}
+}
+.desc-none.mob-flex {
+	display: none !important;
+	@include breakpoint(mobilebig) {
+		display: flex !important; 
+	}
+}
+.desc-none.mob-block {
+	display: none !important;
+	@include breakpoint(mobilebig) {
+		display: block !important; 
+	}
+}
+.water {
+	position: relative;
+	&__content {
+		position: static;
+	}
+}

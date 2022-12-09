@@ -1,0 +1,7 @@
+@import "_mixins/font-face";
+
+@include font-face("GraphikLCG", "../fonts/GraphikLCG-Regular/GraphikLCG-Regular", 400, normal);
+@include font-face("GraphikLCG", "../fonts/GraphikLCG-Semibold/GraphikLCG-Semibold", 600, normal);
+@include font-face("GraphikLCG", "../fonts/GraphikLCG-Bold/GraphikLCG-Bold", 700, normal);
+
+

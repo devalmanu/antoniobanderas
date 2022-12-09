@@ -1,0 +1,93 @@
+.cover {
+	&__sidebar {
+      width: 214px;
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+      min-height: 100vh;
+      height: 100%;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+		transition: position 0.6s linear;
+		z-index: 12;
+      &.bar-fixed {
+			position: fixed;
+		}
+		@include breakpoint(tablet) {
+			width: 136px;
+		}
+		@include breakpoint(mobilebig) {
+			display: none;
+		}
+      .cover {
+         &__main {
+            height: calc(100% - 174px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+         }
+         &__icon {
+            width: 116px;
+            height: 116px;
+				@include breakpoint(tablet) {
+					width: 84px;
+					height: 84px;
+				}
+            margin: 56px auto;
+         }
+         &__title {
+            // height: calc(100% - 116px);
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            max-width: 175px;
+            text-align: center;
+            span {
+               font-weight: 700;
+               font-size: 24px;
+               line-height: 1;
+               text-align: center;
+               text-transform: uppercase;
+               @include breakpoint(tablet) {
+                  font-size: 18px;
+               }
+            }
+         }
+         &__slash {
+            margin: 0 5px;
+         }
+
+         &__arrow {
+            height: 174px;
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            margin-top: auto;
+				@include breakpoint(tablet) {
+					height: 125px;
+				}
+				a {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+            svg {
+               transform: rotate(90deg);
+               stroke: $color-white;
+					@include breakpoint(tablet) {
+						width: 58px;
+						height: 56px;
+					}
+            }
+         }
+      }
+   }
+}

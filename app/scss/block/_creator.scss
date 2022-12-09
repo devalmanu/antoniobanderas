@@ -1,0 +1,239 @@
+.creator {
+   min-height: 100vh;
+   height: 100%;
+   width: 100%;
+   display:flex;
+   height: 100vh;
+   min-height: 900px;
+   width: 100%;
+   align-items: stretch;
+   // overflow-y: hidden;
+   position: relative;
+   border-top: 0;
+   padding-right: 200px;
+   @include breakpoint(desktop) {
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      height: 100%;
+      min-height: 1024px;
+      padding-right: 156px;
+   }
+   @include breakpoint(mobilebig) {
+      min-height: 736px;
+      height: 100%;
+      padding-right: 0;
+   }
+
+   &__block {
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      h2 {
+         margin-top: 23px;
+         z-index: 5;
+         @include breakpoint(desktop) {
+            margin-top: 50px;
+         }
+         @include breakpoint(mobilebig) {
+            margin-top: 40px;
+            text-align: center;
+            margin-bottom: -4px;
+         }
+      }
+   }
+   
+   .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+    
+   .orbit-mercury {
+      width: 547px;
+      height: 547px;
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      margin: auto;
+      animation: orbit 19s infinite linear;
+      z-index: 2;
+      @include breakpoint(mobilebig) {
+         width: 387px;
+         height: 387px;
+      }
+   }
+     
+   .orbit-mercury:after {
+      content: "";
+      position: absolute;
+      width: 101px;
+      height: 101px;
+      background: url('../img/planet/creator-planet-1.png') center no-repeat, $color-dark;
+      border-radius: $border-50;
+      border: 2px dashed $border-blue;
+      display: block;
+      margin: 30px;
+      z-index: 2;
+      @include breakpoint(mobilebig) {
+         width: 71px;
+         height: 71px;
+         margin: 20px;
+         border: 1.41329px dashed $border-blue;
+      } 
+   }
+    
+   .orbit-venus {
+      width: 811px;
+      height: 811px;
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      margin: auto;
+      animation: orbit 24s infinite linear;
+      z-index: 2;
+      @include breakpoint(mobilebig) {
+         width: 573px;
+         height: 573px;
+      }
+   }
+
+   .orbit-venus:after {
+      content: "";
+      position: absolute;
+      width: 94px;
+      height: 94px;
+      background: url('../img/planet/creator-planet-1.png') center no-repeat, $color-dark;
+      border-radius: $border-50;
+      border: 2px dashed $border-blue;
+      display: block;
+      margin: 70px;
+      z-index: 2;
+      @include breakpoint(mobilebig) {
+         width: 65px;
+         height: 65px;
+         margin: 53px;
+         border: 1.41329px dashed $border-blue;
+      } 
+   }
+   
+    
+   .orbit-earth {
+      width: 1135px;
+      height: 1135px;
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      margin: auto;
+      animation: orbit 26s infinite linear;
+      z-index: 2; 
+      @include breakpoint(mobilebig) {
+         width: 802px;
+         height: 802px;
+      } 
+   }
+   
+   .orbit-earth:after {
+      content: "";
+      position: absolute;
+      width: 135px;
+      height: 135px;
+      background: url('../img/planet/creator-planet-1.png') center no-repeat, $color-dark;
+      border-radius: $border-50;
+      border: 2px dashed $border-blue;
+      display: block;
+      margin: 100px;
+      z-index: 2;
+      @include breakpoint(mobilebig) {
+         width: 80px;
+         height: 80px;
+         margin: 80px;
+         border: 1.41329px dashed $border-blue;
+      } 
+   }
+
+   .orbit-mars {
+      width: 1562px;
+      height: 1562px;
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      margin: auto;
+      animation: orbit 30s infinite linear;
+      z-index: 2;
+      @include breakpoint(mobilebig) {
+        display: none;
+      }  
+   }
+
+   .orbit-mars:after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      background: url('../img/planet/creator-planet-1.png') center no-repeat, $color-dark;
+      border-radius: $border-50;
+      border: 2px dashed $border-blue;
+      display: block;
+      margin: 166px;
+      z-index: 2;
+      @include breakpoint(mobilebig) {
+         display: none;
+      } 
+   }
+  
+   
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 14px;
+      max-width: 1400px;
+      // padding: 0 20px;
+      
+      position: relative;
+      z-index: 10;
+      @include breakpoint(desktop) {
+         margin-top: -37px;
+         margin-left: 2%;
+      }
+      @include breakpoint(mobilebig) {
+         margin-left: 0;
+      }
+      
+      
+   }
+   &__main {
+      position: absolute;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 14px;
+      max-width: 1400px;
+      padding: 0 20px;
+      text-align: center;
+      margin-top: 65px;
+      p {
+         max-width: 685px;
+         z-index: 5;
+      }
+      .btn-reset {
+         margin-top: 23px;
+         z-index: 5;
+      }
+      &:after {
+         content: '';
+         position: absolute;
+         width: 211px;
+         height: 210px;
+         background: $accent;
+         filter: blur(88px);
+         z-index: -1;
+      }
+   }
+}

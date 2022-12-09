@@ -1,0 +1,11 @@
+.eau-water {
+   position: relative;
+   z-index: 15;
+   @include breakpoint(desktop) {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+   }
+}

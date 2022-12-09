@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Antonio Banderas">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<title>Antonio Banderas</title>
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/choices.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="page_body">
+	<!-- <div class="scrollElement"></div> -->
+	<main class="main interactive-main" style="background-image: url(img/@2x/bg_stars.jpg);">
+		<div class="interactive__section">
+			<!-- interactive -->
+			<div class="interactive__content" id="interactive__content">
+				<!-- creator -->
+				<div class="interactive" id="interactive">
+					<!-- main creator -->
+					<h1 class="section-title is-vishidden">Обложка</h1>
+					<div class="interactive__block" id="interactive-block">
+						<div class="content">
+							<form action="#" method="POST" class="form-cover">
+								<div class="profile-redactor">
+									<h2>Создай обложку для своей вселенной</h2>
+									<div class="avatar-edit">
+										<div><span>Загрузите фото</span>
+											<input type="file" id="imageUpload" accept=".png, .jpg">
+											<label for="imageUpload">Загрузить фото</label>
+										</div>
+										<p class="subtext">Фото должно быть минимум 600 пикселей по ширине. Формат .jpg или
+											.png</p>
+									</div>
+									<p class="message-error"></p>
+									<div class="avatar-title">
+										<span>Выберите заголовок</span>
+										<select name="заголовок" class="select-default" aria-label="выбор заголовка">
+											<option value="Моя звезда года">Моя звезда года</option>
+											<option value="заголовок 2">заголовок 2</option>
+											<option value="заголовок 3">заголовок 3</option>
+										</select>
+
+									</div>
+									<div class="avatar-description">
+										<span>Опишите лучшие качества вашего героя</span>
+										<textarea class="avatar-description__text" name="" id="" cols="30" rows="2" maxlength="54"
+											placeholder="Введите текст"></textarea>
+										<span class="counter-text">
+											<span class="counter-text__current">0</span>
+											<span>/</span>
+											<span class="counter-text__total">54</span>
+										</span>
+									</div>
+									<div class="color-select">
+										<span>Цвет текста</span>
+										<ul class="color-select__list">
+											<li class="color-select__item">
+												<button class="color-select__btn btn-reset color-select__btn--active"
+													data-color="Белый" aria-label="Choice white color"
+													style="background-color: #ffffff;"></button>
+											</li>
+											<li class="color-select__item">
+												<button class="color-select__btn btn-reset" data-color="Темный"
+													aria-label="Choice black color" style="background-color: #081A39;"></button>
+											</li>
+											<li class="color-select__item">
+												<button class="color-select__btn btn-reset" data-color="Голубой"
+													aria-label="Choice blue color" style="background-color: #1581FF;"></button>
+											</li>
+										</ul>
+										<!-- <p class="color-select__selected"><span></span></p> -->
+									</div>
+									<button class="btn-reset btn-accent-link button-generate" type="button">Готово</button>
+								</div>
+								<div class="avatar-upload">
+									<div class="avatar-preview">
+										<div class="imagePreview" style="background-image: url('./img/@2x/avatar-default.jpg');">
+											<div class="avatar-title-finish">Моя звезда года</div>
+											<div class="avatar-desc-finish">
+											</div>
+										</div>
+									</div>
+									<div class="interactive__animate">
+										<div class="interactive__orbit orbit-mercury">
+										</div>
+										<div class="interactive__orbit orbit-venus">
+										</div>
+										<div class="interactive__orbit orbit-earth">
+										</div>
+										<div class="interactive__orbit orbit-mars">
+										</div>
+									</div>
+									<pre id="log"></pre>
+								</div>
+							</form>
+
+							<div class="interactive__result is-vishidden">
+								<div class="interactive__image">
+									<div class="interactive__cover capture">
+										<div class="avatar-cover"></div>
+									</div>
+									<div class="interactive__animate">
+										<div class="interactive__orbit orbit-mercury">
+										</div>
+										<div class="interactive__orbit orbit-venus">
+										</div>
+										<div class="interactive__orbit orbit-earth">
+										</div>
+										<div class="interactive__orbit orbit-mars">
+										</div>
+									</div>
+									<div class="interactive__button">
+										<a href="#" class="btn-reset btn-accent-link button-save">Скачать</a>
+										<button class="btn-reset btn-accent-link button-save__link btn-clipboard"
+											data-clipboard-target="#log">Скопировать ссылку
+										</button>
+
+										<a href="#" class="btn-reset btn-back-link desc-none mob-flex">
+											<svg width="22" height="21">
+												<use xlink:href="img/sprite/sprite.svg#sidebar-arrow-next"></use>
+											</svg>
+											назад
+										</a>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- left Sidebar Area -->
+				<div class="cover__sidebar desc-flex mob-none">
+					<div class="cover__main">
+						<div class="cover__icon">
+							<!-- <img src="img/@2x/ico_separador.png" alt="Icon"> -->
+						</div>
+						<div class="cover__title">
+							<span class="cover-counter__current">1</span>
+							<span class="cover__slash">/</span>
+							<span class="cover-counter__total">2</span>
+						</div>
+					</div>
+					<div class="cover__arrow">
+						<a href="./index.html#creator" class="btn-reset link-button">
+							<svg width="95" height="92">
+								<use xlink:href="img/sprite/sprite.svg#sidebar-arrow-next"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="libs/gsap.min.js"></script>
+	<script src="libs/ScrollTrigger.min.js"></script>
+	<script src="libs/html2canvas.min.js"></script>
+	<script src="libs/choices.min.js"></script>
+	<script src="libs/clipboard.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>

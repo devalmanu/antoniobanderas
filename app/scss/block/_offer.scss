@@ -1,0 +1,466 @@
+
+.main {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+}
+.offer {
+   min-height: 100vh;
+   // min-height: 900px;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding: 40px 0 85px;
+   position: relative;
+   @include breakpoint(desktop) {
+		max-height: 1024px;
+      min-height: 100vh;
+      padding: 112px 0 145px;
+	}
+   @include breakpoint(mobilebig) {
+		max-height: 812px;
+      min-height: 100vh;
+      padding: 101px 0 57px;
+	}
+   .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      // align-items: center;
+      align-items: flex-start;
+      justify-content: center;
+      transition: all 0.5s linear;
+      position: absolute;
+      @include breakpoint(mobilebig) {
+         height: auto;
+      }
+   }
+    
+   .coin {
+      width: 100%;
+      max-width: 553px;
+      height: 100%;
+      max-height: 553px;
+      border-radius: $border-50;
+      margin: 60px;
+      // margin: 0;
+      position: relative;
+      transition: position 0.3s linear;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 4;
+      @include breakpoint(bigdesktop) {
+         margin: 0;
+      }
+      @include breakpoint(desktop) {
+         margin: 0 105px;
+      }
+      @include breakpoint(mobilebig) {
+         margin: 0 48px;
+         width: 100%;
+         min-width: 318px;
+      }
+      
+      .coin-shine {
+         min-width: 553px;
+         min-height: 553px;
+         border-radius: $border-50;
+         top:50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         box-shadow: 0 0 60px 0 #26487f inset, 0 0 60px 20px #26487f;
+         position: absolute;
+         z-index: -1;
+         @include breakpoint(mobilebig) {
+            width: 100%;
+            height: 100%;
+            min-width: inherit;
+            min-height: inherit;
+            max-width: calc(100% + 96px);
+            max-height: calc(100% + 96px);
+         }
+      }
+      .eau {
+         position: absolute;
+         z-index: 5;
+         width: 100%;
+         max-width: 308px;
+         @include breakpoint(mobilebig) {
+            max-width: 45vw;
+         }
+         @include breakpoint(mobileonly) {
+            max-width: 35vw;
+            min-width: 175px;
+         }
+         &.eua-dark {
+            top: -7px;
+            right: 38px;
+            @include breakpoint(mobilebig) {
+               right: 22px;
+            }
+         }
+         &.eua-blue {
+            top: 38px;
+            left: 38px;
+            @include breakpoint(mobilebig) {
+               top: 20px;
+               left: 20px;
+            }
+         }
+      }
+   }
+    
+   .orbit-mercury {
+      width: calc(813px * 2);
+      height: calc(813px * 2);
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      // top: 0;
+ 
+      // bottom: 0;
+      margin: auto;
+      animation: orbit 19s infinite linear;
+      transform: rotate(140deg);
+      z-index: 2;
+      &._active {
+         width: 813px;
+         height: 813px; 
+         opacity: 1;
+         transition: opacity 0.6s ease 1.2s, width 0.6s ease 1.2s, height 0.6s ease 1.2s;
+         @include breakpoint(mobilebig) {
+            width: calc(100% + 150px);
+            height: calc(100% + 150px);
+         }
+      }
+
+      
+   }
+     
+   .orbit-mercury:after {
+      content: "";
+      width: 68px;
+      height: 68px;
+      background: url('../img/planet/planet-1.png') center no-repeat;
+      border-radius: $border-50;
+      display: block;
+      margin: 85px;
+      z-index: 3;
+      @include breakpoint(mobilebig) {
+         width: 55px;
+         height: 55px;
+         margin: 50px;
+      }
+   }
+    
+   .orbit-venus {
+      width: calc(1083px * 2);
+      height: calc(1083px * 2);
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      margin: auto;
+      animation: orbit 24s infinite linear;
+      z-index: 2;
+      &._active {
+         width: 1083px;
+         height: 1083px;
+         opacity: 1;
+         transition: opacity 0.6s ease 1.4s, width 0.6s ease 1.4s, height 0.6s ease 1.4s;
+         @include breakpoint(mobilebig) {
+            width: calc(100% + 310px);
+            height: calc(100% + 310px);
+         }
+      }
+   }
+
+   .orbit-venus:after {
+      content: "";
+      width: 81px;
+      height: 81px;
+      background: url('../img/planet/planet-2.png') center no-repeat;
+      border-radius: $border-50;
+      display: block;
+      margin: 120px;
+      z-index: 3;
+      @include breakpoint(mobilebig) {
+         width: 63px;
+         height: 63px;
+         margin: 69px;
+      }
+   }
+    
+   .orbit-earth {
+      width: calc(1347px * 2);
+      height: calc(1347px * 2);
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      margin: auto;
+      animation: orbit 26s infinite linear;
+      transform: rotate(110deg);
+      z-index: 2;
+      &._active {
+         width: 1347px;
+         height: 1347px;
+         opacity: 1;
+         transition: opacity 0.6s ease 1.6s, width 0.6s ease 1.6s, height 0.6s ease 1.6s;
+         @include breakpoint(mobilebig) {
+            width: calc(100% + 460px);
+            height: calc(100% + 460px);
+         }
+      }
+   }
+    
+   .orbit-earth:after {
+      content: "";
+      width: 100px;
+      height: 97px;
+      background: url('../img/planet/planet-3.png') center no-repeat;
+      border-radius: $border-50;
+      display: block;
+      margin: 150px;
+      z-index: 3;
+      @include breakpoint(mobilebig) {
+         width: 70px;
+         height: 70px;
+         margin: 85px;
+      }
+   }
+    
+   .orbit-mars {
+      width: calc(1631px * 2);
+      height: calc(1631px * 2);
+      border: $border-orbit;
+      border-radius: $border-50;
+      position: absolute;
+      margin: auto;
+      animation: orbit 30s infinite linear;
+      transform: rotate(260deg);
+      &._active {
+         width: 1631px;
+         height: 1631px;
+         opacity: 1;
+         transition: opacity 0.6s ease 1.8s, width 0.6s ease 1.8s, height 0.6s ease 1.8s;
+         @include breakpoint(mobilebig) {
+            width: calc(100% + 625px);
+            height: calc(100% + 625px);
+         }
+      }
+   }
+
+   .orbit-mars:after {
+      content: "";
+      width: 137px;
+      height: 137px;
+      background: url('../img/planet/planet-4.png') center no-repeat;
+      border-radius: $border-50;
+      display: block;
+      margin: 172px;
+      @include breakpoint(mobilebig) {
+         width: 70px;
+         height: 70px;
+         margin: 85px;
+      }
+   }
+   
+   &__container {
+      text-align: center;
+      z-index: 7;
+      padding: 0 20px;
+      position: absolute;
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 71px;
+      @include breakpoint(desktop) {
+         bottom: 94px;
+      }
+      @include breakpoint(mobilebig) {
+         padding: 0;
+         bottom: 82px;
+      }
+   }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 12px;
+      transition: position 0.5s linear;
+      p.offer__text {
+         display: flex;
+         align-items: center;
+         gap: 12px 14px;
+         font-weight: 700;
+         font-size: 28px;
+         line-height: 1;
+         text-align: center;
+         justify-content: center;
+         text-transform: uppercase;
+         @include breakpoint(desktop) {
+            flex-wrap: wrap;  
+         }
+         img {
+            max-width: 213px;
+            @include breakpoint(mobilebig) {
+               max-width: 140px;
+            }
+         }
+         @include breakpoint(mobilebig) {
+            font-size: 20px;
+            gap: 8px;
+         }
+      }
+      .btn-reset {
+         margin-top: 23px;
+      }
+   }
+
+   &__arrow {
+      position: absolute;
+      bottom: 0;
+      top: auto;
+      left: calc(50% - 27px);
+      right: calc(50% - 27px);
+      z-index: 8;
+      @include breakpoint(mobilebig) {
+         left: calc(50% - 17px);
+         right: calc(50% - 17px);
+      }
+   }
+
+   // aminate offer elements
+   &__mercury, &__venus, &__earth, &__mars {
+      opacity: 0;
+      transition: opacity 0.3s ease 0s, width 0.3s ease 0s, height 0.3s ease 0s;
+      
+   }
+   &__title, &__text, &__button,  
+   &__eau-dark {
+      transform: translate(0px, 100%);
+      opacity: 0;
+      transition: all 0.6s ease 0s;
+      
+   }
+
+   &__coin, &__shine {
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+   }
+
+   &__coin {
+      &._active {
+         transform: scale(1);
+         opacity: 1;
+         transition: all 0.25s ease 0s;
+      }
+   }
+   &__shine {
+      &._active {
+         transform: scale(1);
+         opacity: 1;
+         transition: all 0.3s ease 0.25s;
+      }
+   }
+
+   &__eau-blue {
+      transform: translate(0px, 95%);
+      opacity: 0;
+      transition: all 0.6s ease 0s;
+      &._active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+         transition: all 0.6s ease 0.7s;
+      }
+   } 
+
+   &__eau-dark {
+      &._active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+         transition: all 0.6s ease 1.1s;
+      }
+   }
+
+   &__title {
+      max-width: 950px;
+      @include breakpoint(mini) {
+         font-size: 31px;
+      }
+      &._active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+         transition: all 0.6s ease 1.4s;
+      }
+   }
+
+   &__text {
+      &._active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+         transition: all 0.6s ease 1.8s;
+      }
+   }
+   
+   &__button {
+      &._active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+         transition: all 0.6s ease 2.3s;
+      }
+   }
+}
+
+// planet animate
+@keyframes orbit {
+   100% {
+     -webkit-transform: rotate(360deg);
+   }
+   100% {
+     -moz-transform: rotate(360deg);
+   }
+   100% {
+     -ms-transform: rotate(360deg);
+   }
+   100% {
+     -o-transform: rotate(360deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+// star animate
+@keyframes sf-fly-by-1 {
+   from {
+      transform: translateZ(-500px);
+      opacity: 0.4;
+   }
+   to {
+      transform: translateZ(0);
+      opacity: 0.5;
+   }
+}
+@keyframes sf-fly-by-2 {
+   from {
+      transform: translateZ(-1200px);
+      opacity: 0.25;
+   }
+   to {
+      transform: translateZ(0);
+      opacity: 0.5;
+   }
+}
+@keyframes sf-fly-by-3 {
+   from {
+      transform: translateZ(-2000px);
+      opacity: 0.1;
+   }
+   to {
+      transform: translateZ(0);
+      opacity: 0.5;
+   }
+}
