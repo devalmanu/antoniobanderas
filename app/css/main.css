@@ -3388,6 +3388,9 @@ p:last-child, p:only-child {
   border: 1px solid #1581FF;
   border: 0;
 }
+.avatar-title .choices__list--dropdown .choices__list--dropdown .choices__list {
+  max-height: 500px;
+}
 .avatar-title .choices__list--dropdown .choices__item {
   padding: 8px 12px;
   font-size: 18px;

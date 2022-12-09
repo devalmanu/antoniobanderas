@@ -424,6 +424,9 @@
             background: #083162;
             border: 1px solid $accent;
             border: 0;
+            .choices__list--dropdown .choices__list {
+               max-height: 500px;
+            }
             .choices__item {
                padding: 8px 12px;
                font-size: 18px;

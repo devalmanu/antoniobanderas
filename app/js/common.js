@@ -76,8 +76,14 @@ function changeSideBarTitle() {
          sideBar.querySelector('h4').innerText = titleBar;
 
          let elemNextId = elem.nextElementSibling;
+         let elemParent = elem.closest(".pin-spacer");
          if (elemNextId) {
             sideBar.querySelector('.link-button').setAttribute('href', `#${elem.nextElementSibling.id}`);
+         }
+         if (elemNextId == 'null' && elemParent) {
+            let elemfindInParent = elemParent.querySelector('.blockIn');
+            let blockInId = elemfindInParent.getAttribute('id');
+            sideBar.querySelector('.link-button').setAttribute('href', `#${blockInId}`);
          }
 
       }
@@ -117,7 +123,9 @@ function sidebarFixed() {
 
       if (window.pageYOffset > offerSectionHeight) {
          sideBar.classList.add('bar-fixed');
-         changeSideBarTitle();
+         if (window.innerWidth < 1200) {
+            changeSideBarTitle();
+         }
 
       } else {
          sideBar.classList.remove('bar-fixed');
@@ -236,6 +244,9 @@ function startAnimate() {
          end: "bottom",
          scrub: true,
          pin: true,
+         onEnter: function () {
+            document.querySelector("#water .link-button").setAttribute("href", "#surprise")
+         },
          onLeave: function () {
             steps.classList.add("leave");
          },
@@ -348,6 +359,9 @@ function startAnimate() {
          start: 'top top',
          end: 'bottom',
          scrub: true,
+         onEnter: function () {
+            document.querySelector("#water .link-button").setAttribute("href", "#creator")
+         },
          // pin: true,
       });
       // появление первого приза
@@ -444,6 +458,9 @@ function startAnimate() {
          end: 'top center',
          scrub: true,
          pin: true,
+         onEnter: function () {
+            document.querySelector("#water .link-button").setAttribute("href", "#friends")
+         },
       });
 
       scene_4.fromTo(".creator__content", {
@@ -498,6 +515,9 @@ function startAnimate() {
       scene_5.to(elementFriends, {
          ease: "power1.out",
          duration: 1,
+         onEnter: function () {
+            document.querySelector("#water .link-button").setAttribute("href", "#eau-water")
+         },
       });
       // scene_5.timeScale(0.25);
       ScrollTrigger.create({
@@ -751,14 +771,18 @@ if (formCover) {
    const avatarTitle = document.querySelector('.avatar-title-finish');
    const avatarDesc = document.querySelector('.avatar-desc-finish');
 
+
    const defaultSelect = () => {
       const element = document.querySelector('.select-default');
       const choices = new Choices(element, {
          searchEnabled: false,
       });
       let ariaLabel = element.getAttribute('aria-label');
+
       element.closest('.choices').setAttribute('aria-label', ariaLabel);
       element.addEventListener('change', function (event) {
+         // let dropdownList = document.querySelector('.choices__list');
+         // dropdownList.setAttribute('data-simplebar', '');
          avatarTitle.textContent = event.detail.value;
       });
    };
