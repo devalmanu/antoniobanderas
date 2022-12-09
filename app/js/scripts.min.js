@@ -74,7 +74,12 @@ function changeSideBarTitle() {
       if (isVisible(elem)) {
          let titleBar = elem.querySelector('h4.section-title').innerText;
          sideBar.querySelector('h4').innerText = titleBar;
-
+      }
+   });
+}
+function changeSideBarLink() {
+   allElementsSection.forEach((elem, i) => {
+      if (isVisible(elem)) {
          let elemNextId = elem.nextElementSibling;
          let elemParent = elem.closest(".pin-spacer");
          if (elemNextId) {
@@ -85,11 +90,9 @@ function changeSideBarTitle() {
             let blockInId = elemfindInParent.getAttribute('id');
             sideBar.querySelector('.link-button').setAttribute('href', `#${blockInId}`);
          }
-
       }
    });
 }
-
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function () {
    if (mainIndexPage) {
@@ -123,8 +126,10 @@ function sidebarFixed() {
 
       if (window.pageYOffset > offerSectionHeight) {
          sideBar.classList.add('bar-fixed');
+         changeSideBarTitle();
          if (window.innerWidth < 1200) {
             changeSideBarTitle();
+            changeSideBarLink();
          }
 
       } else {
