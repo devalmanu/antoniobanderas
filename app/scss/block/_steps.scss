@@ -8,7 +8,7 @@
    position: relative;
    border-top: 0;
    @include breakpoint(desktop) {
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      // border-top: 1px solid rgba(255, 255, 255, 0.5);
       min-height: 100vh;
       height: 1024px;
    }
@@ -30,6 +30,7 @@
             padding: 124px 264px 70px 58px;
             margin-left: auto;
             position: relative;
+            z-index: 4;
             @include breakpoint(desktop) {
                padding: 124px 156px 30px 20px;
             }
