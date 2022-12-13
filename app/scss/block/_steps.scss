@@ -174,12 +174,14 @@
                   right: 0;
                }
                .steps__number {
+                  will-change: transform;
                   width: 160px;
                   height: 160px;
                   border: 0;
                   @include breakpoint(desktop) {
                      width: 139px;
                      height: 139px;
+                     will-change: unset;
                   }
                   svg {
                      @include breakpoint(desktop) {

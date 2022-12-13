@@ -1244,6 +1244,7 @@ p:last-child, p:only-child {
   }
 }
 .steps__content .steps__item:nth-child(2) .steps__number {
+  will-change: transform;
   width: 160px;
   height: 160px;
   border: 0;
@@ -1252,6 +1253,7 @@ p:last-child, p:only-child {
   .steps__content .steps__item:nth-child(2) .steps__number {
     width: 139px;
     height: 139px;
+    will-change: unset;
   }
 }
 @media (max-width: 1200px) {
