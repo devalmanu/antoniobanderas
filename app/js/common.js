@@ -263,100 +263,41 @@ function startAnimate() {
          },
       });
 
-      // появление кругов возле цифры 1
-      scene_2.fromTo("#step-one .steps__number-ball", {
+      // появление кругов
+      scene_2.fromTo(".steps__number-ball", {
          opacity: 0,
          scale: 0
       }, {
          opacity: 1,
          scale: 1,
+         duration: 0.1,
          ease: "power2.out",
-      });
-      // появление кругов возле флаконов
-      scene_2.fromTo("#steps__eua-blue .steps__number-ball", {
-         opacity: 0,
-         scale: 0
-      }, {
-         opacity: 1,
-         scale: 1,
-         ease: "power2.out"
-      }, 1).fromTo("#steps__eua-dark .steps__number-ball", {
-         opacity: 0,
-         scale: 0
-      }, {
-         opacity: 1,
-         scale: 1,
-         ease: "power2.out"
-      }, 1)
+      }, 0);
 
-      // появление линий 1-2, 2-3
-      scene_2.fromTo("#finish-line--1", {
+      // появление линий
+      scene_2.fromTo(".finish-line", {
          opacity: 0,
       }, {
          opacity: 1,
+         duration: 0.1,
          ease: "power2.out"
-      }, 2).fromTo("#finish-line--2", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power2.out"
-      }, 2.5).fromTo("#finish-line--3", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power2.out"
-      }, 3)
+      }, "<25%")
 
-      // появление кругов возле цифры 4
-      scene_2.fromTo("#step-four .steps__number-ball", {
-         opacity: 0,
-         scale: 0
-      }, {
-         opacity: 1,
-         scale: 1,
-         ease: "power2.out",
-         duration: 3
-      }, 4);
-
-      // появление линий 4-2, 3-1
-      scene_2.fromTo("#finish-line--4", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power2.out"
-      }, 7).fromTo("#finish-line--5", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power2.out"
-      }, 8)
 
       // исчезновение всех кругов
-      scene_2.to("#step-one .steps__number-ball", {
+      scene_2.to(".steps__number-ball", {
          opacity: 0,
          scale: 0,
+         duration: 0.1,
          ease: "power2.out"
-      }, 9).to("#step-four .steps__number-ball", {
-         opacity: 0,
-         scale: 0,
-         ease: "power2.out"
-      }, 10).to("#steps__eua-blue .steps__number-ball", {
-         opacity: 0,
-         scale: 0,
-         duration: 2,
-         ease: "power2.out"
-      }, 11).to("#steps__eua-dark .steps__number-ball", {
-         opacity: 0,
-         scale: 0,
-         ease: "power2.out"
-      }, 12);
+      }, 0.1);
 
       // исчезновение линий
       scene_2.to(".finish-line", {
          opacity: 0,
-         duration: 5,
+         duration: 0.1,
          ease: "power2.out",
-      }, 13)
+      }, 0.1)
 
       /* 3 третья секция */
       let scene_3 = gsap.timeline();
