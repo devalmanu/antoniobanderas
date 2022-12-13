@@ -2164,6 +2164,7 @@ p:last-child, p:only-child {
 .creator__block h2 {
   margin-top: 23px;
   z-index: 5;
+  max-width: 500px;
 }
 @media (max-width: 1200px) {
   .creator__block h2 {
