@@ -1,21 +1,39 @@
 
 .main {
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center;
-   &.parallax {
-      background-size: auto;
-      background-attachment: fixed;
-      @supports (-webkit-touch-callout: inherit) {
-         background-attachment: scroll;
-      }
+   // background-size: cover;
+   // background-repeat: no-repeat;
+   // background-attachment: fixed;
+   // background-position: center;
+   position: relative;
+   // &.parallax {
+   //    background-size: auto;
+   //    background-attachment: fixed;
+   //    @supports (-webkit-touch-callout: inherit) {
+   //       background-attachment: scroll;
+   //    }
+   // }
+   .main-bg {
+      // content: '';
+      position: fixed;
+      z-index: -1;
+      display: block;
+      top: 0px;
+      width: 100vw;
+      height: 102vh;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      // background-image: url('../img/@2x/bg_stars.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+   
    }
    
 }
 
 .offer {
-   min-height: 100vh;
+   min-height: 98vh;
    // min-height: 900px;
    height: 100%;
    background-size: cover;
@@ -24,13 +42,16 @@
    position: relative;
    @include breakpoint(desktop) {
 		max-height: 1024px;
-      min-height: 100vh;
+      min-height: 97vh;
       padding: 112px 0 145px;
 	}
    @include breakpoint(mobilebig) {
 		max-height: 812px;
-      min-height: 100vh;
+      min-height: 94vh;
       padding: 101px 0 57px;
+	}
+   @include breakpoint(mini) {
+      padding: 70px 0 57px;
 	}
    .content {
       width: 100%;
@@ -289,7 +310,7 @@
       }
       @include breakpoint(mobilebig) {
          padding: 0;
-         bottom: 82px;
+         bottom: 8.5vh;
       }
    }
    &__content {
@@ -324,6 +345,9 @@
       }
       .btn-reset {
          margin-top: 23px;
+         @include breakpoint(mobilebig) {
+            margin-top: 12px;
+         }
       }
    }
 

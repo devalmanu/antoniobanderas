@@ -1,11 +1,7 @@
 'use strict';
 
 const mainIndexPage = document.querySelector('.main-index');
-if (navigator.userAgent.match(/(iPad|iPhone|iPod)/gi)) {
-   mainIndexPage.classList.add('parallax');
-} else {
-   console.log('не ios')
-}
+
 // scroll into block
 document.querySelectorAll('a.link-button[href^="#"').forEach(link => {
    link.addEventListener('click', function (e) {

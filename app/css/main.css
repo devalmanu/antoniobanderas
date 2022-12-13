@@ -358,23 +358,25 @@ p:last-child, p:only-child {
 }
 
 .main {
+  position: relative;
+}
+.main .main-bg {
+  position: fixed;
+  z-index: -1;
+  display: block;
+  top: 0px;
+  width: 100vw;
+  height: 102vh;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
-}
-.main.parallax {
-  background-size: auto;
-  background-attachment: fixed;
-}
-@supports (-webkit-touch-callout: inherit) {
-  .main.parallax {
-    background-attachment: scroll;
-  }
 }
 
 .offer {
-  min-height: 100vh;
+  min-height: 98vh;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -384,15 +386,20 @@ p:last-child, p:only-child {
 @media (max-width: 1200px) {
   .offer {
     max-height: 1024px;
-    min-height: 100vh;
+    min-height: 97vh;
     padding: 112px 0 145px;
   }
 }
 @media (max-width: 700px) {
   .offer {
     max-height: 812px;
-    min-height: 100vh;
+    min-height: 94vh;
     padding: 101px 0 57px;
+  }
+}
+@media (max-width: 385px) {
+  .offer {
+    padding: 70px 0 57px;
   }
 }
 .offer .content {
@@ -709,7 +716,7 @@ p:last-child, p:only-child {
 @media (max-width: 700px) {
   .offer__container {
     padding: 0;
-    bottom: 82px;
+    bottom: 8.5vh;
   }
 }
 .offer__content {
@@ -767,6 +774,11 @@ p:last-child, p:only-child {
 }
 .offer__content .btn-reset {
   margin-top: 23px;
+}
+@media (max-width: 700px) {
+  .offer__content .btn-reset {
+    margin-top: 12px;
+  }
 }
 .offer__arrow {
   position: absolute;
