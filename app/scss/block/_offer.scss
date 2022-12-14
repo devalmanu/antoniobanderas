@@ -40,6 +40,7 @@
    background-repeat: no-repeat;
    padding: 40px 0 85px;
    position: relative;
+   margin-bottom: 30vh;
    @include breakpoint(desktop) {
 		max-height: 1024px;
       min-height: 97vh;

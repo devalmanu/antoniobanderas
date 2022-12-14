@@ -218,7 +218,7 @@ function startAnimate() {
          scrollTrigger: {
             trigger: ".offer",
             start: "top 0%",
-            end: "bottom 0%",
+            end: "+40%",
             scrub: 2,
          },
          top: "auto",

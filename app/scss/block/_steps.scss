@@ -27,10 +27,16 @@
          &__points {
             height: 100%;
             width: 100%;
-            padding: 124px 264px 70px 58px;
+            padding: 10vh 264px 7vh 58px;
             margin-left: auto;
             position: relative;
             z-index: 4;
+
+            @media (min-width: 1200.1px) and (min-height: 700px) {
+               padding-top: 124px;
+               padding-bottom: 70px;
+            }
+
             @include breakpoint(desktop) {
                padding: 124px 156px 30px 20px;
             }
@@ -471,10 +477,11 @@
                bottom: 20px;
             }
             img {              
-               top: -95px;
-               left: -40px;
+               top: 50%;
+               left: 50%;
                max-width: 140%;
-               
+               max-height: 45vh;
+               transform: translate(-50%, -50%);
             }
             .steps__eua-dark-1 {
                content: '';
@@ -521,7 +528,7 @@
 
       &:nth-child(1) .finish-line {
          width: 17.6vw;
-         right: -37px;
+         right: 10px;
          top: 36%;
          transform: translateX(100%) rotate(7deg);
 
@@ -537,13 +544,14 @@
       }
       &:nth-child(2) .finish-line--first {
          width: 15vw;
-         left: -78px;
+         left: -85px;
          top: 95%;
          transform: rotate(128deg);
 
          @media (max-width: 1366px) {
-            left: -45px;
-            width: 17vw;
+            top: 82%;
+            left: -19px;
+            width: 11vw;
          }
 
          @include breakpoint(desktop) {
@@ -565,6 +573,11 @@
          top: 100%;
          transform: translateX(41%) rotate(-128deg);
 
+         @media (max-width: 1366px) {
+            right: 28px;
+            top: 69%;
+         }
+
          @include breakpoint(desktop) {
             top: 110%;
             width: 218px;
@@ -584,8 +597,9 @@
          transform: translateX(76%) rotate(-171deg);
 
          @media (max-width: 1366px) {
+            top: 54%;
             width: 13vw;
-            transform: translateX(57%) rotate(-171deg);
+            transform: translateX(77%) rotate(-171deg);
          }
 
          @include breakpoint(desktop) {
