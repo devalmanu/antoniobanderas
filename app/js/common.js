@@ -58,7 +58,6 @@ if (animItems.length > 0) {
    }, 300);
 }
 
-
 const offerSection = document.querySelector('#offer');
 const waterSection = document.querySelector('#water');
 const sideBar = document.querySelector('.steps__sidebar');
@@ -166,7 +165,6 @@ function visibleDiv(target) {
       sideBar.querySelector('.link-button').setAttribute('href', `#${target.nextElementSibling.id}`);
    }
 };
-
 
 function isVisible(elem) {
    if (mainIndexPage) {
@@ -282,7 +280,6 @@ function startAnimate() {
          duration: 0.1,
          ease: "power2.out"
       }, "<25%")
-
 
       // исчезновение всех кругов
       scene_2.to(".steps__number-ball", {
@@ -436,28 +433,6 @@ function startAnimate() {
          stagger: 0.3,
       }, 1);
 
-      scene_4.fromTo(".creator .orbit-mercury:after", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power1.out"
-      },).fromTo(".creator .orbit-venus:after", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power1.out"
-      },).fromTo(".creator .orbit-earth:after", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power1.out"
-      },).fromTo(".creator .orbit-mars:after", {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         ease: "power1.out"
-      },);
-
       /* 5 секция */
       let scene_5 = gsap.timeline();
       // scene_5.timeScale(0.5)
@@ -488,17 +463,11 @@ function startAnimate() {
          top: "-15vw",
          right: "-60%",
          scale: 1.4,
-         scrub: 2,
          delay: 0.5,
          opacity: 1,
          duration: 1.5, ease: "none",
       }, {
-         scrollTrigger: {
-            trigger: elementFriends,
-            // scrub: 8,
-         },
          scale: 1,
-         scrub: 3,
          opacity: 0,
          top: "50%",
          right: "50%",
@@ -515,7 +484,6 @@ function startAnimate() {
          top: "50vw",
          left: "-25vw",
          opacity: 1,
-         scrub: 2,
          delay: 0.5,
          scale: 2,
          duration: 1.5, ease: "none",
@@ -527,7 +495,6 @@ function startAnimate() {
          xPercent: -50,
          yPercent: -50,
          duration: 5, ease: "none",
-         scrub: 3,
       }, 1.5);
       // четвертая карта
       scene_5.fromTo('.card-4', {
@@ -538,13 +505,11 @@ function startAnimate() {
          top: "40vw",
          right: "-50%",
          scale: 3,
-         scrub: 2,
          delay: 0.5,
          opacity: 1,
          duration: 1.5, ease: "none",
       }, {
          scale: 1,
-         scrub: 3,
          opacity: 0,
          top: "50%",
          right: "50%",
@@ -556,18 +521,16 @@ function startAnimate() {
       scene_5.fromTo('.card-3', {
          scrollTrigger: {
             trigger: elementFriends,
-            scrub: 18,
+            scrub: 19,
          },
          top: "25vw",
          left: "-40vw",
          scale: 2.5,
-         scrub: 2,
          delay: 0.5,
          opacity: 1,
          duration: 1.5, ease: "none",
       }, {
          scale: 1,
-         scrub: 3,
          opacity: 0,
          top: "50%",
          left: "50%",
@@ -820,7 +783,6 @@ if (formCover) {
    }
 
    const buttonSave = document.querySelector(".button-save");
-
    // Download with right click
    buttonSave.addEventListener("click", () => {
       html2canvas(elementToSave).then(canvas => {
@@ -851,37 +813,6 @@ if (formCover) {
    clipboard.on('error', function (e) {
       // console.log('Ошибка копирования');
    });
-
-
-   // При перезагрузке страницы пользователя сохраняются данные
-   // перед перезагрузкой или закрытием страницы (событие beforeunload) данные нужно сохранить
-   // function setLocalStorage() {
-   //    localStorage.setItem('avatar-title', avatarTitle.value);
-   //    localStorage.setItem('avatar-title-color', avatarTitle.style.color);
-   //    localStorage.setItem('avatar-description__text', textDescription.value);
-   //    localStorage.setItem('counter-text__current', counter.innerHTML);
-   //    localStorage.setItem('avatar-desc', avatarDesc.innerHTML);
-   //    localStorage.setItem('avatar-desc-color', avatarDesc.style.color);
-   //    localStorage.setItem('avatar-img', imagePreview.style.backgroundImage);
-   // }
-   // window.addEventListener('beforeunload', setLocalStorage)
-   // // перед загрузкой страницы(событие load) данные нужно восстановить и отобразить
-   // function getLocalStorage() {
-   //    if (localStorage.getItem('avatar-title')) {
-   //       avatarTitle.value = localStorage.getItem('avatar-title');
-   //       avatarTitle.style.color = localStorage.getItem('avatar-title-color');
-   //    }
-   //    if (localStorage.getItem('avatar-description__text')) {
-   //       textDescription.value = localStorage.getItem('avatar-description__text');
-   //       counter.innerHTML = localStorage.getItem('counter-text__current');
-   //       avatarDesc.innerHTML = localStorage.setItem('avatar-desc');
-   //       avatarDesc.style.color = localStorage.getItem('avatar-desc-color');
-   //    }
-   //    if (localStorage.getItem('avatar-img')) {
-   //       imagePreview.style.backgroundImage = localStorage.getItem('avatar-img');
-   //    }
-   // }
-   // window.addEventListener('load', getLocalStorage)
 }
 
 
