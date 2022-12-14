@@ -62,7 +62,7 @@ const offerSection = document.querySelector('#offer');
 const waterSection = document.querySelector('#water');
 const sideBar = document.querySelector('.steps__sidebar');
 // Получаем нужный элемент
-let elementSteps = document.querySelector('#steps');
+let elementSteps = document.querySelector('#how-to-join');
 let elementSurprise = document.querySelector('#surprise');
 let elementСreator = document.querySelector('#creator');
 let elementFriends = document.querySelector('#friends');
@@ -102,7 +102,7 @@ window.addEventListener('scroll', function () {
       sidebarFixed();
       if (window.innerWidth >= 1200) {
          // startAnimate();
-         toggleVisibilityClass(document.querySelector('#steps'));
+         toggleVisibilityClass(document.querySelector('#how-to-join'));
       }
    }
 });
@@ -111,7 +111,7 @@ window.addEventListener('load', function () {
    if (mainIndexPage) {
       if (window.innerWidth >= 1200) {
          startAnimate();
-         toggleVisibilityClass(document.querySelector('#steps'));
+         toggleVisibilityClass(document.querySelector('#how-to-join'));
       }
    }
 });
@@ -195,7 +195,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function startAnimate() {
    if (mainIndexPage) {
-      const steps = document.querySelector("#steps");
+      const steps = document.querySelector("#how-to-join");
 
       gsap.registerPlugin(ScrollTrigger);
 
@@ -544,7 +544,7 @@ function startAnimate() {
 
 
 function stepsAppearance() {
-   const section = document.querySelector("#steps");
+   const section = document.querySelector("#how-to-join");
    const headerHeight = 0;
    const clientHeight = document.documentElement.clientHeight;
 
