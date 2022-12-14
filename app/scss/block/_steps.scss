@@ -407,6 +407,12 @@
                z-index: 9;
             }
          }
+
+         &__number-ball {
+            opacity: 0;
+            transform: scale(0);
+         }
+
          &__text {
             z-index: 10;
          }
@@ -503,6 +509,7 @@
       .finish-line {
          position: absolute;
          height: 2px;
+         opacity: 0;
          background-image: linear-gradient(to right, transparent 50%, #2E4C81 50%);
          background-size: 20px 2px;
          background-repeat: repeat-x;

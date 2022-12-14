@@ -66,7 +66,7 @@ let elementSteps = document.querySelector('#steps');
 let elementSurprise = document.querySelector('#surprise');
 let elementСreator = document.querySelector('#creator');
 let elementFriends = document.querySelector('#friends');
-// let elementProducts = document.querySelector('#products');
+// let elementProducts = document.querySelector('#section-products');
 
 let allElementsSection = [elementSteps, elementSurprise, elementСreator, elementFriends];
 
@@ -103,7 +103,6 @@ window.addEventListener('scroll', function () {
       if (window.innerWidth >= 1200) {
          // startAnimate();
          toggleVisibilityClass(document.querySelector('#steps'));
-         stepsAppearance();
       }
    }
 });
@@ -113,7 +112,6 @@ window.addEventListener('load', function () {
       if (window.innerWidth >= 1200) {
          startAnimate();
          toggleVisibilityClass(document.querySelector('#steps'));
-         stepsAppearance();
       }
    }
 });
@@ -262,24 +260,17 @@ function startAnimate() {
       });
 
       // появление кругов
-      scene_2.fromTo(".steps__number-ball", {
-         opacity: 0,
-         scale: 0
-      }, {
+      scene_2.to(".steps__number-ball", {
          opacity: 1,
          scale: 1,
          duration: 0.1,
          ease: "power2.out",
-      }, 0);
-
-      // появление линий
-      scene_2.fromTo(".finish-line", {
-         opacity: 0,
-      }, {
+      });
+      scene_2.to(".finish-line", {
          opacity: 1,
          duration: 0.1,
          ease: "power2.out"
-      }, "<25%")
+      });
 
       // исчезновение всех кругов
       scene_2.to(".steps__number-ball", {
@@ -287,14 +278,14 @@ function startAnimate() {
          scale: 0,
          duration: 0.1,
          ease: "power2.out"
-      }, 0.1);
+      });
 
       // исчезновение линий
       scene_2.to(".finish-line", {
          opacity: 0,
          duration: 0.1,
          ease: "power2.out",
-      }, 0.1)
+      })
 
       /* 3 третья секция */
       let scene_3 = gsap.timeline();
